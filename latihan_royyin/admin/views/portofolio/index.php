@@ -48,15 +48,17 @@
       </nav> 
       <!-- Akhir Navbar --> 
         
+      <php foreach($data['profile'] as $pro) : ?>
       <!-- jumbotron --> 
       <section class="jumbotron text-center"> 
-        <img src="asset/img/foto.jpeg" alt="Royyin Ruyyani" width="200"class="rounded-circle img-thumbnail"> 
-        <h1 class="display-4">Royyin Ruyyani</h1> 
-        <p class="lead">student</p> 
+        <img src="<?=baseurl;?>/asset/img/<?=$pro['foto']; ?>" alt="" class="img-thumbnail image rounded-circle"> 
+        <h1 class="display-4"><?=$pro['nama'];?></h1> 
+        <p class="lead"><?=$pro['jabatan']; ?> | <?=$pro['perusahaan']; ?></p> 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,138.7C384,128,480,96,576,80C672,64,768,64,864,96C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
  
  
       </section> 
+      <?php endforeach ?>
  
       
       <!-- Akhir jumbotron --> 
@@ -73,7 +75,7 @@
               <p>I'm a student in 4th vocational high school tasikmalaya and I'm into software engineering vocational school</p> 
             </div> 
             <div class="col-md-4"> 
-              <p>I learned how to create a simple CRUD project for test preparation using PHP, HTML & CSS.</p> 
+              <p>I learned how to create a simple CRUD project for test preparation using PHP, HTML & CSS</p> 
             </div> 
           </div> 
         </div> 
