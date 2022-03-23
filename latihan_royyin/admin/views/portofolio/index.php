@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="asset/style.css"/> 
     <title>My Portofolio | Royyin Ruyyani</title> 
     
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
   </head> 
   <body id="home"> 
     <!-- Navbar --> 
@@ -67,10 +70,10 @@
           </div> 
           <div class="row justify-content-center fs-5 text-center"> 
             <div class="col-md-4"> 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deserunt ullam laudantium perspiciatis dolor porro maiores quisquam, recusandae similique vitae?</p> 
+              <p>I'm a student in 4th vocational high school tasikmalaya and I'm into software engineering vocational school</p> 
             </div> 
             <div class="col-md-4"> 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quidem iste eveniet nam deleniti tenetur laboriosam dolorem iusto sapiente aliquid provident quo, placeat ipsam libero!</p> 
+              <p>I learned how to create a simple CRUD project for test preparation using PHP, HTML & CSS.</p> 
             </div> 
           </div> 
         </div> 
@@ -90,9 +93,9 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card" >
-                        <img src="asset/img/projects/php.jpg" class="card-img-top" alt="project 1">
+                        <img src="asset/img/projects/crud.png" class="card-img-top" alt="project 1">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">Project crud sederhana untuk persiapan ujikom</p>
                         </div>
                       </div>
                 </div>
@@ -100,15 +103,15 @@
                     <div class="card" >
                         <img src="asset/img/projects/html.png" class="card-img-top" alt="project 2">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">Project HTML & CSS pembuatan aplikasi web profil</p>
                         </div>
                       </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" >
-                        <img src="asset/img/projects/mysql.jpg" class="card-img-top" alt="project 3">
+                        <img src="asset/img/projects/api.jpg" class="card-img-top" alt="project 3">
                         <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <p class="card-text">Belajar API sederhana dengan menggunakan php</p>
                         </div>
                       </div>
                 </div>
