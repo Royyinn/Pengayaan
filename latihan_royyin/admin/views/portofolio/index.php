@@ -19,11 +19,11 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
   </head> 
-  <body> 
+  <body id ="Home"> 
     <!-- Navbar --> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top"> 
         <div class="container"> 
-          <a class="navbar-brand" href="#">SMKN 4</a> 
+          <a class="navbar-brand" href="#">RY</a> 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> 
             <span class="navbar-toggler-icon"></span> 
           </button> 
@@ -50,7 +50,7 @@
       
       <!-- jumbotron --> 
       <?php foreach($data ['profile'] as $pro) : ?>
-      <section id ="Home" class = "jumbotron text-center"> 
+      <section class ="jumbotron atas text-center"> 
         <img src="<?=baseurl;?>/asset/img/<?=$pro['foto']; ?>" alt="" width = "200" class="img-thumbnail image rounded-circle"> 
         <h1 class="display-4"><?=$pro['nama'];?></h1> 
         <p class="lead"><?=$pro['jabatan']; ?> | <?=$pro['perusahaan']; ?></p> 
@@ -70,13 +70,15 @@
               <h2>About Me</h2> 
             </div> 
           </div> 
-          <div class="row justify-content-center fs-5 text-center"> 
+          <div class="row justify-content-center fs-5 text-center">
+            <?php foreach($data['about'] as$ab) :?>
             <div class="col-md-4"> 
-              <p>I'm a student in 4th vocational high school tasikmalaya and I'm into software engineering vocational school</p> 
+              <p><?=$ab['column1']; ?></p> 
             </div> 
             <div class="col-md-4"> 
-              <p>I learned how to create a simple CRUD project for test preparation using PHP, HTML & CSS</p> 
-            </div> 
+              <p><?=$ab['column2']; ?></p> 
+            </div>
+            <?php endforeach?> 
           </div> 
         </div> 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#e2edff" fill-opacity="1" d="M0,128L40,144C80,160,160,192,240,181.3C320,171,400,117,480,96C560,75,640,85,720,112C800,139,880,181,960,208C1040,235,1120,245,1200,234.7C1280,224,1360,192,1400,176L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg> 
@@ -92,33 +94,19 @@
                 <h2>My projects</h2> 
               </div> 
             </div> 
-            <div class="row">
-                <div class="col-md-4">
+            <div class="row justify-content-center text-center">
+              <?php foreach($data['project'] as $pro) :?>
+                <div class="col-md-3 mb-3">
                     <div class="card" >
-                        <img src="asset/img/projects/crud.png" class="card-img-top" alt="project 1">
+                        <img src="<?=baseurl;?>/asset/img/projects/<?=$pro['foto']; ?>" class="card-img-top" alt="foto_project">
                         <div class="card-body">
-                          <p class="card-text">Project crud sederhana untuk persiapan ujikom</p>
+                          <h3><?=$pro['nama_p']; ?></h3>
+                          <p class="card-text"><?=$pro['ket']; ?></p>
                         </div>
-                      </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card" >
-                        <img src="asset/img/projects/html.png" class="card-img-top" alt="project 2">
-                        <div class="card-body">
-                          <p class="card-text">Project HTML & CSS pembuatan aplikasi web profil</p>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card" >
-                        <img src="asset/img/projects/api.jpg" class="card-img-top" alt="project 3">
-                        <div class="card-body">
-                          <p class="card-text">Belajar API sederhana dengan menggunakan php</p>
-                        </div>
-                      </div>
-                </div>
+              <?php endforeach; ?>
             </div>
-          </div>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,192L40,176C80,160,160,128,240,112C320,96,400,96,480,106.7C560,117,640,139,720,154.7C800,171,880,181,960,192C1040,203,1120,213,1200,186.7C1280,160,1360,96,1400,64L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
         </section> 
     <!-- akhir projects --> 

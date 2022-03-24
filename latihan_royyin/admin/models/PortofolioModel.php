@@ -1,6 +1,6 @@
 <?php
 
-class PortofolioModel{
+class PortofolioModel{ 
     private $host = DB_HOST;
     private $user = DB_USER;
     private $pass = DB_PASS;
@@ -27,6 +27,21 @@ class PortofolioModel{
         $this->stmt=$this->dbh->prepare('SELECT*FROM user');
         $this->stmt->execute();
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
-
     }
+
+    public function getAbout()
+    {
+        $this->stmt=$this->dbh->prepare('SELECT*FROM about');
+        $this->stmt->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getProject()
+    {
+        $this->stmt=$this->dbh->prepare('SELECT*FROM project');
+        $this->stmt->execute();
+        return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    
 }
