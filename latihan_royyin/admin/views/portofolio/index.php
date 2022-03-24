@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- My Css --> 
-    <link rel="stylesheet" href="asset/style.css"/> 
+    <link rel="stylesheet" href="<?= baseurl; ?>/asset/style.css"/> 
     <title>My Portofolio | Royyin Ruyyani</title> 
     
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
   </head> 
-  <body id="home"> 
+  <body> 
     <!-- Navbar --> 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top"> 
         <div class="container"> 
@@ -47,11 +47,11 @@
         </div> 
       </nav> 
       <!-- Akhir Navbar --> 
-        
-      <php foreach($data['profile'] as $pro) : ?>
+      
       <!-- jumbotron --> 
-      <section class="jumbotron text-center"> 
-        <img src="<?=baseurl;?>/asset/img/<?=$pro['foto']; ?>" alt="" class="img-thumbnail image rounded-circle"> 
+      <?php foreach($data ['profile'] as $pro) : ?>
+      <section id ="Home" class = "jumbotron text-center"> 
+        <img src="<?=baseurl;?>/asset/img/<?=$pro['foto']; ?>" alt="" width = "200" class="img-thumbnail image rounded-circle"> 
         <h1 class="display-4"><?=$pro['nama'];?></h1> 
         <p class="lead"><?=$pro['jabatan']; ?> | <?=$pro['perusahaan']; ?></p> 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,128L48,133.3C96,139,192,149,288,138.7C384,128,480,96,576,80C672,64,768,64,864,96C960,128,1056,192,1152,192C1248,192,1344,128,1392,96L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg> 
