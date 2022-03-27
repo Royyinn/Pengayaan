@@ -43,5 +43,18 @@ class PortofolioModel{
         return $this->stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    
+    public function tampungPesan($data_pesan)
+    {
+        $email = $data_pesan["email"];
+        $nama = $data_pesan["nama_k"];
+        $pesan = $data_pesan["pesan"];
+
+        $query = "INSERT INTO contact
+        VALUES
+        ('','$email',,$nama','$pesan')
+        ";
+        $this->stmt = $this->dbh->prepare($query);
+        $this->stmt->execute();
+        return $this->stmt->rowCount();
+    }
 }
